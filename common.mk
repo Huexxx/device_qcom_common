@@ -139,7 +139,7 @@ endif
 include $(QCOM_COMMON_PATH)/components.mk
 
 # Filesystem
-TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
+#TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
 
 # Power
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
@@ -147,9 +147,9 @@ $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-prod
 endif
 
 # Public Libraries
-PRODUCT_COPY_FILES += \
-    device/qcom/qssi/public.libraries.product-qti.txt:$(TARGET_COPY_OUT_PRODUCT)/etc/public.libraries-qti.txt \
-    device/qcom/qssi/public.libraries.system_ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
+#PRODUCT_COPY_FILES += \
+#    device/qcom/qssi/public.libraries.product-qti.txt:$(TARGET_COPY_OUT_PRODUCT)/etc/public.libraries-qti.txt \
+#    device/qcom/qssi/public.libraries.system_ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
 
 # SECCOMP Extensions
 PRODUCT_COPY_FILES += \
@@ -159,11 +159,11 @@ PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Permissions
-PRODUCT_COPY_FILES += \
-    device/qcom/qssi/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
-    device/qcom/qssi/privapp-permissions-qti-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti-system-ext.xml \
-    device/qcom/qssi/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
-    device/qcom/qssi/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml
+#PRODUCT_COPY_FILES += \
+#    device/qcom/qssi/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+#    device/qcom/qssi/privapp-permissions-qti-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti-system-ext.xml \
+#    device/qcom/qssi/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
+#    device/qcom/qssi/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml
 
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
